@@ -1,0 +1,9 @@
+---
+
+#ansible_ssh_common_args: 'oKexAlgorithms=+diffie-hellman-group1-sha1'
+ansible_ssh_user: cisco
+ansible_ssh_pass: password112
+#ansible_connection: netconf
+ansible_netconf_user: cisco
+ansible_netconf_pass: password112
+#ansible_python_interpreter: /usr/bin/python3

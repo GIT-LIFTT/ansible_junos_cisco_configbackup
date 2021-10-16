@@ -1,0 +1,15 @@
+---
+
+- name: Network Getting Started First Playbook
+  gather_facts: false
+  hosts: firewall2
+  tasks:
+  
+    - name: execute the get_config rpc 
+      netconf_get:
+        display: json
+      register: result
+    - name: printthe configuration as JSON
+      debug:
+        var: result.output
+        

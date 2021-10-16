@@ -1,0 +1,14 @@
+---
+
+- name: Network Getting Started First Playbook
+  gather_facts: false
+  hosts: firewall2
+  connection: local
+  tasks:
+  
+    - name: configurable backup path
+      junos_config:
+        backup: yes
+        backup_options:
+          filename: backup.cfg
+          
