@@ -2,7 +2,7 @@
 
 - name: Network Getting Started First Playbook
   connection: network_cli
-  hosts: firewall1
+  hosts: cisco
   gather_facts: no
   tasks:
   
