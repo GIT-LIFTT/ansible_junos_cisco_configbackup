@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #Juniper Core Firewall1 ########################################################################
-Juniper_Core_Firewall1_NEW=$(ls -l Juniper_Core_Firewall1_config.* | awk '{ print $9 }'| sed -n 1p)
-Juniper_Core_Firewall1_OLD=$(ls -l Juniper_Core_Firewall1_config.* | awk '{ print $9 }'| sed -n 2p)
+Juniper_Core_Firewall1_NEW=$(ls -l Juniper_Core_Firewall1_config.* 2>/dev/null | awk '{ print $9 }'| sed -n 1p)
+Juniper_Core_Firewall1_OLD=$(ls -l Juniper_Core_Firewall1_config.* 2>/dev/null | awk '{ print $9 }'| sed -n 2p)
 
 
 diff -q $Juniper_Core_Firewall1_NEW $Juniper_Core_Firewall1_OLD 1>/dev/null 2>/dev/null
@@ -13,8 +13,8 @@ then
 fi
 ##################################################################################################
 #Juniper Core Firewall2########################################################################
-Juniper_Core_Firewall2_NEW=$(ls -l Juniper_Core_Firewall2_config.* | awk '{ print $9 }'| sed -n 1p)
-Juniper_Core_Firewall2_OLD=$(ls -l Juniper_Core_Firewall2_config.* | awk '{ print $9 }'| sed -n 2p)
+Juniper_Core_Firewall2_NEW=$(ls -l Juniper_Core_Firewall2_config.* 2>/dev/null | awk '{ print $9 }'| sed -n 1p)
+Juniper_Core_Firewall2_OLD=$(ls -l Juniper_Core_Firewall2_config.* 2>/dev/null | awk '{ print $9 }'| sed -n 2p)
 
 
 diff -q $Juniper_Core_Firewall2_NEW $Juniper_Core_Firewall2_OLD 1>/dev/null 2>/dev/null
@@ -25,8 +25,8 @@ then
 fi
 ##################################################################################################
 #Juniper Branch Firewall1########################################################################
-Juniper_Branch_Firewall1_NEW=$(ls -l Juniper_Branch_Firewall1* | awk '{ print $9 }'| sed -n 1p)
-Juniper_Branch_Firewall1_OLD=$(ls -l Juniper_Branch_Firewall1* | awk '{ print $9 }'| sed -n 2p)
+Juniper_Branch_Firewall1_NEW=$(ls -l Juniper_Branch_Firewall1* 2>/dev/null | awk '{ print $9 }'| sed -n 1p )
+Juniper_Branch_Firewall1_OLD=$(ls -l Juniper_Branch_Firewall1* 2>/dev/null | awk '{ print $9 }'| sed -n 2p )
 
 
 diff -q $Juniper_Branch_Firewall1_NEW $Juniper_Branch_Firewall1_OLD 1>/dev/null 2>/dev/null
@@ -38,8 +38,8 @@ fi
 ##################################################################################################
 
 #Juniper Branch Firewall2########################################################################
-Juniper_Branch_Firewall2_NEW=$(ls -l Juniper_Branch_Firewall2* | awk '{ print $9 }'| sed -n 1p)
-Juniper_Branch_Firewall2_OLD=$(ls -l Juniper_Branch_Firewall2* | awk '{ print $9 }'| sed -n 2p)
+Juniper_Branch_Firewall2_NEW=$(ls -l Juniper_Branch_Firewall2* 2>/dev/null | awk '{ print $9 }'| sed -n 1p)
+Juniper_Branch_Firewall2_OLD=$(ls -l Juniper_Branch_Firewall2* 2>/dev/null | awk '{ print $9 }'| sed -n 2p)
 
 
 diff -q $Juniper_Branch_Firewall2_NEW $Juniper_Branch_Firewall2_OLD 1>/dev/null 2>/dev/null
@@ -51,8 +51,8 @@ fi
 ##################################################################################################
 
 #Juniper Branch Firewall3
-Juniper_Branch_Firewall3_NEW=$(ls -l Juniper_Branch_Firewall3* | awk '{ print $9 }'| sed -n 1p)
-Juniper_Branch_Firewall3_OLD=$(ls -l Juniper_Branch_Firewall3* | awk '{ print $9 }'| sed -n 2p)
+Juniper_Branch_Firewall3_NEW=$(ls -l Juniper_Branch_Firewall3* 2>/dev/null | awk '{ print $9 }'| sed -n 1p)
+Juniper_Branch_Firewall3_OLD=$(ls -l Juniper_Branch_Firewall3* 2>/dev/null | awk '{ print $9 }'| sed -n 2p)
 
 
 diff -q $Juniper_Branch_Firewall3_NEW $Juniper_Branch_Firewall3_OLD 1>/dev/null 2>/dev/null
@@ -64,8 +64,8 @@ fi
 
 ##################################################################################################
 #cisco firewall core########################################################################
-cisco_core_firewall1_NEW=$(ls -lt cisco_core_firewall1* | awk '{ print $9 }'| sed -n 1p)
-cisco_core_firewall1_OLD=$(ls -lt cisco_core_firewall1* | awk '{ print $9 }'| sed -n 2p)
+cisco_core_firewall1_NEW=$(ls -lt cisco_core_firewall1* 2>/dev/null | awk '{ print $9 }'| sed -n 1p)
+cisco_core_firewall1_OLD=$(ls -lt cisco_core_firewall1* 2>/dev/null | awk '{ print $9 }'| sed -n 2p)
 
 
 diff -q $cisco_core_firewall1_NEW $cisco_core_firewall1_OLD 1>/dev/null 2>/dev/null
