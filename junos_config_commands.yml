@@ -1,12 +1,12 @@
 ---
 
-- name: Network Getting Started First Playbook
+- name: Juniper config backup playbook
   gather_facts: false
   hosts: junos
   connection: local
   tasks:
   
-    - name: configurable backup path
+    - name: backing juniper config up
       junos_config:
         backup: yes
     
