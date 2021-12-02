@@ -1,0 +1,12 @@
+---
+
+- name: ASA Config backup playbook
+  connection: network_cli
+  hosts: cisco
+  gather_facts: no
+  tasks:
+  
+    - name: backing up asa config 
+      asa_config:
+        backup: yes
+        

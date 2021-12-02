@@ -1,0 +1,13 @@
+---
+
+- name: Juniper config backup playbook
+  gather_facts: false
+  hosts: junos
+  connection: local
+  tasks:
+  
+    - name: backing up juniper config
+      junos_config:
+        backup: yes
+    
+          
